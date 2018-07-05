@@ -37,3 +37,7 @@ I trained on CIFAR-10 dataset as an example to test for Classification . Have no
 |---------------|---------------|---------------|
 |9.2            |50.3           |93.08          |
 
+# NOTE
+
+  应该是网络模型较小，在网络前向传播计算耗时上CPU，GPU相差不大，但使用GPU时包含了向GPU传入，传出数据过程，导致使用GPU比使用CPU慢很多。
+  
