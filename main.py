@@ -34,7 +34,9 @@ def image_loader(image_name):
                 
 def main():
     # Parse the JSON arguments
+    
     config_args = parse_args()
+
     
     if config_args.run_mode == "train" :
         model = MobileNet2(scale=1.0, input_size=config_args.input_size, t=6, in_channels=config_args.num_channels, num_classes=config_args.num_classes)
@@ -53,9 +55,11 @@ def main():
         print('Finished Training')
         
     else :
-        model = torch.load('models/model_800.pkl')
+        model = torch.load('models/model_140.pkl')
         model = model.eval()
         model = model.to(device)
+        
+       # test(model , data.testloader , device) 
         
        # test_image = image_loader("images/14.jpg")
         image_list=glob.glob('./images/*.jpg')
