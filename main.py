@@ -36,6 +36,8 @@ def main():
     # Parse the JSON arguments
     
     config_args = parse_args()
+    
+
 
     
     if config_args.run_mode == "train" :
@@ -45,7 +47,7 @@ def main():
         num_parameters = sum([l.nelement() for l in model.parameters()])
         print(model)
         print('number of parameters: {}'.format(num_parameters))
-
+        
         print("Loading Data...")
         data = CIFAR10Data(config_args)
         print("Data loaded successfully\n")
@@ -59,7 +61,7 @@ def main():
         model = model.eval()
         model = model.to(device)
         
-       # test(model , data.testloader , device) 
+        #test(model , data.testloader , device) 
         
        # test_image = image_loader("images/14.jpg")
         image_list=glob.glob('./images/*.jpg')

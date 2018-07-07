@@ -35,7 +35,7 @@ I trained on CIFAR-10 dataset as an example to test for Classification . Have no
  
 | ModelSize (M) | Top-1 Accuracy| Top-5 Accuracy|
 |---------------|---------------|---------------|
-|9.2            |70.301           |97.08          |
+|9.2            |70.11           |97.67          |
 
 # NOTE
 
